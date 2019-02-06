@@ -4,12 +4,13 @@
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
     <div class="bow-wrapper">
-      <woah-transition group :duration="5000" transitionName="comeInStyle">
+      <woah-transition group :duration="5000" transitionName="rotateComplex">
         <div class="box"
               v-for="(item, index) in list"
               @click="remove(index)"
               :key="item">
         </div>
+        <!-- <div class="box" v-if="show"></div> -->
       </woah-transition>
     </div>
   </div>

@@ -1,8 +1,8 @@
 <template>
   <component :is="type"
              :tag="tag"
-             :enter-active-class="`${transitionName}`"
-             :leave-active-class="`${transitionName}-reverse`"
+             :enter-active-class="`${transitionName}-animation`"
+             :leave-active-class="`${transitionName}-animation-reverse`"
              move-class="smooth-move"
              v-bind="$attrs"
              v-on="hooks">
@@ -63,24 +63,31 @@ export default {
 </script>
 
 <style lang="css">
-.comeInStyle {
+.comeInStyle-animation, .comeInStyle-animation-reverse {
   animation-name: comeInStyle;
-}
-.comeInStyle-reverse {
-  animation-name: comeInStyle;
-  animation-direction: reverse;
 }
 
-.wowzors {
+.wowzors-animation, .wowzors-animation-reverse {
   animation-name: wowzors;
 }
 
-.wowzors-reverse {
-  animation-name: wowzors;
+.leaveInStyle-animation, .leaveInStyle-animation-reverse {
+  animation-name: leaveInStyle;
+}
+
+.rotateComplex-animation {
+  animation-name: rotateComplex;
+}
+
+.rotateComplex-animation-reverse {
+  animation-name: rotateComplexOut;
+}
+
+.comeInStyle-animation-reverse, .leaveInStyle-animation-reverse, .wowzors-animation-reverse {
   animation-direction: reverse;
 }
 
 .smooth-move {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.5s linear;
 }
 </style>
