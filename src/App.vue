@@ -10,6 +10,11 @@
               @click="remove(index)"
               :key="item">
         </div>
+        <!-- <h1 v-for="(item, index) in list"
+            @click="remove(index)"
+            :key="item">
+            {{ `Item: ${item}` }}
+        </h1> -->
         <!-- <div class="box" v-if="show"></div> -->
       </woah-transition>
     </div>

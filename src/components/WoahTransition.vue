@@ -75,6 +75,10 @@ export default {
   animation-name: leaveInStyle;
 }
 
+.spin3D-animation, .spin3D-animation-reverse {
+  animation-name: spin3D;
+}
+
 .rotateComplex-animation {
   animation-name: rotateComplex;
 }
@@ -91,7 +95,7 @@ export default {
   animation-name: flyOut;
 }
 
-.comeInStyle-animation-reverse, .leaveInStyle-animation-reverse, .wowzors-animation-reverse {
+.comeInStyle-animation-reverse, .leaveInStyle-animation-reverse, .wowzors-animation-reverse, .spin3D-animation-reverse {
   animation-direction: reverse;
 }
 
