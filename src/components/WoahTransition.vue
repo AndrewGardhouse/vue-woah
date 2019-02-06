@@ -1,6 +1,7 @@
 <template>
   <component :is="type"
              :tag="tag"
+             class="woah-transition"
              :enter-active-class="`${transitionName}-animation`"
              :leave-active-class="`${transitionName}-animation-reverse`"
              move-class="smooth-move"
@@ -63,20 +64,29 @@ export default {
 </script>
 
 <style lang="css">
-.comeInStyle-animation, .comeInStyle-animation-reverse {
+.comeInStyle-animation,
+.comeInStyle-animation-reverse {
   animation-name: comeInStyle;
 }
 
-.wowzors-animation, .wowzors-animation-reverse {
+.wowzors-animation,
+.wowzors-animation-reverse {
   animation-name: wowzors;
 }
 
-.leaveInStyle-animation, .leaveInStyle-animation-reverse {
+.leaveInStyle-animation,
+.leaveInStyle-animation-reverse {
   animation-name: leaveInStyle;
 }
 
-.spin3D-animation, .spin3D-animation-reverse {
+.spin3D-animation,
+.spin3D-animation-reverse {
   animation-name: spin3D;
+}
+
+.simpleEntranceExit-animation,
+.simpleEntranceExit-animation-reverse {
+  animation-name: simpleEntrance;
 }
 
 .rotateComplex-animation {
@@ -95,7 +105,11 @@ export default {
   animation-name: flyOut;
 }
 
-.comeInStyle-animation-reverse, .leaveInStyle-animation-reverse, .wowzors-animation-reverse, .spin3D-animation-reverse {
+.comeInStyle-animation-reverse,
+.leaveInStyle-animation-reverse,
+.wowzors-animation-reverse,
+.spin3D-animation-reverse,
+.simpleEntranceExit-animation-reverse {
   animation-direction: reverse;
 }
 
