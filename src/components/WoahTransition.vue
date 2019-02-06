@@ -55,7 +55,7 @@ export default {
       el.style.animationDuration = '';
     },
     setAbsolutePosition(el) {
-      if (this.group && (this.transitionName !== 'blazingStar' && this.transitionName !== 'blazingStarText')) {
+      if (this.group && (this.transitionName !== 'blazingStar' && this.transitionName !== 'blazingStarText' && this.transitionName !== 'fadeIn')) {
         el.style.position = 'absolute';
       }
     },
@@ -104,6 +104,11 @@ export default {
   animation-name: blazingStarText;
 }
 
+.fadeIn-animation,
+.fadeIn-animation-reverse {
+  animation-name: fadeIn;
+}
+
 .rotateComplex-animation {
   animation-name: rotateComplex;
 }
@@ -125,7 +130,8 @@ export default {
 .wowzors-animation-reverse,
 .spin3D-animation-reverse,
 .simpleEntranceExit-animation-reverse,
-.starWars-animation-reverse {
+.starWars-animation-reverse,
+.fadeIn-animation-reverse {
   animation-direction: reverse;
 }
 
