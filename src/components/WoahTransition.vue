@@ -29,12 +29,12 @@ export default {
     },
     tag: {
       type: String,
-      default: "div"
+      default: 'div'
     }
   },
   computed: {
     type() {
-      return this.group ? "transition-group" : "transition";
+      return this.group ? 'transition-group' : 'transition';
     },
     hooks() {
       return {
@@ -52,11 +52,11 @@ export default {
       el.style.animationDuration = `${this.duration}ms`;
     },
     cleanUpDuration(el) {
-      el.style.animationDuration = "";
+      el.style.animationDuration = '';
     },
     setAbsolutePosition(el) {
-      if (this.group) {
-        el.style.position = "absolute";
+      if (this.group && (this.transitionName !== 'blazingStar' && this.transitionName !== 'blazingStarText')) {
+        el.style.position = 'absolute';
       }
     },
   }
@@ -92,6 +92,16 @@ export default {
 .starWars-animation,
 .starWars-animation-reverse {
   animation-name: starWars;
+}
+
+.blazingStar-animation,
+.blazingStar-animation-reverse {
+  animation-name: blazingStar;
+}
+
+.blazingStarText-animation,
+.blazingStarText-animation-reverse {
+  animation-name: blazingStarText;
 }
 
 .rotateComplex-animation {

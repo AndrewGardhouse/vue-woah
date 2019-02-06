@@ -4,7 +4,7 @@
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
     <div class="bow-wrapper">
-      <woah-transition group :duration="5000" transitionName="starWars">
+      <woah-transition group :duration="5000" transitionName="blazingStar">
         <div class="woah box"
               v-for="(item, index) in list"
               @click="remove(index)"
