@@ -89,6 +89,11 @@ export default {
   animation-name: simpleEntrance;
 }
 
+.starWars-animation,
+.starWars-animation-reverse {
+  animation-name: starWars;
+}
+
 .rotateComplex-animation {
   animation-name: rotateComplex;
 }
@@ -109,7 +114,8 @@ export default {
 .leaveInStyle-animation-reverse,
 .wowzors-animation-reverse,
 .spin3D-animation-reverse,
-.simpleEntranceExit-animation-reverse {
+.simpleEntranceExit-animation-reverse,
+.starWars-animation-reverse {
   animation-direction: reverse;
 }
 
