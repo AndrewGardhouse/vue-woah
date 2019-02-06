@@ -4,25 +4,24 @@
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
     <div class="bow-wrapper">
-      <wowzors-transition group :duration="5000" appear>
+      <woah-transition group :duration="5000" transitionName="comeInStyle">
         <div class="box"
               v-for="(item, index) in list"
               @click="remove(index)"
               :key="item">
         </div>
-        <!-- <div class="box" v-if="show"></div> -->
-      </wowzors-transition>
+      </woah-transition>
     </div>
   </div>
 </template>
 
 <script>
-import WowzorsTransition from '@/components/WowzorsTransition'
+import WoahTransition from '@/components/WoahTransition'
 
 export default {
   name: 'app',
   components: {
-    WowzorsTransition,
+    WoahTransition,
   },
   data() {
     return {
