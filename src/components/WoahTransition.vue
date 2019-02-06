@@ -83,6 +83,14 @@ export default {
   animation-name: rotateComplexOut;
 }
 
+.flyInOut-animation {
+  animation-name: flyIn;
+}
+
+.flyInOut-animation-reverse {
+  animation-name: flyOut;
+}
+
 .comeInStyle-animation-reverse, .leaveInStyle-animation-reverse, .wowzors-animation-reverse {
   animation-direction: reverse;
 }
