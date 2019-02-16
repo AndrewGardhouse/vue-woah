@@ -3,32 +3,33 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
-    <div class="bow-wrapper">
-      <woah-transition :duration="2000" transitionName="fadeIn">
-        <!-- <div class="woah box"
-              v-for="(item, index) in list"
-              @click="remove(index)"
-              :key="item">
-        </div> -->
-        <!-- <h1 v-for="(item, index) in list"
+    <wowzors-transition group>
+      <!-- <div class="woah box"
+            v-for="(item, index) in list"
             @click="remove(index)"
             :key="item">
-            {{ `Item: ${item}` }}
-        </h1> -->
-        <div class="box woah" v-if="show"></div>
-      </woah-transition>
+      </div> -->
+      <h1 v-for="(item, index) in list"
+          @click="remove(index)"
+          class="woah"
+          :key="item">
+          {{ `Item: ${item}` }}
+      </h1>
+        <!-- <div class="box woah" v-if="show"></div> -->
+    </wowzors-transition>
       <!-- <div class="woah starWars box" v-if="show"></div> -->
-    </div>
   </div>
 </template>
 
 <script>
-import WoahTransition from '@/components/WoahTransition'
+// import WoahTransition from '@/components/WoahTransition'
+import WowzorsTransition from '@/components/WowzorsTransition'
 
 export default {
   name: 'app',
   components: {
-    WoahTransition,
+    // WoahTransition,
+    WowzorsTransition,
   },
   data() {
     return {
@@ -56,7 +57,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }
