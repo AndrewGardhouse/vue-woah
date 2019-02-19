@@ -3,33 +3,37 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
-    <wowzors-transition group>
-      <!-- <div class="woah box"
-            v-for="(item, index) in list"
+    <div class="box-wrapper">
+      <ComeInStyleTransition>
+        <!-- <div class="woah box"
+              v-for="(item, index) in list"
+              @click="remove(index)"
+              :key="item">
+        </div> -->
+        <!-- <h1 v-for="(item, index) in list"
             @click="remove(index)"
+            class="woah"
             :key="item">
-      </div> -->
-      <h1 v-for="(item, index) in list"
-          @click="remove(index)"
-          class="woah"
-          :key="item">
-          {{ `Item: ${item}` }}
-      </h1>
-        <!-- <div class="box woah" v-if="show"></div> -->
-    </wowzors-transition>
+            {{ `Item: ${item}` }}
+        </h1> -->
+        <div class="box woah" v-if="show"></div>
+      </ComeInStyleTransition>
+    </div>
       <!-- <div class="woah starWars box" v-if="show"></div> -->
   </div>
 </template>
 
 <script>
 // import WoahTransition from '@/components/WoahTransition'
-import WowzorsTransition from '@/components/WowzorsTransition'
+// import WowzorsTransition from '@/components/WowzorsTransition'
+import ComeInStyleTransition from '@/components/ComeInStyleTransition'
 
 export default {
   name: 'app',
   components: {
     // WoahTransition,
-    WowzorsTransition,
+    // WowzorsTransition,
+    ComeInStyleTransition,
   },
   data() {
     return {

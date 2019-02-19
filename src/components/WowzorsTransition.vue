@@ -1,7 +1,7 @@
 <template>
   <component :is="type"
              :tag="tag"
-             class="woah-transition-group"
+             :class="wrapperClass"
              enter-active-class="wowzors-animation"
              leave-active-class="wowzors-animation-reverse"
              move-class="smooth-move"
@@ -11,49 +11,10 @@
   </component>
 </template>
 <script>
+import transitionMixin from '@/mixins/transitionMixin'
+
 export default {
-  props: {
-    duration: {
-      type: Number,
-      default: 5000
-    },
-    group: {
-      type: Boolean,
-      default: false
-    },
-    tag: {
-      type: String,
-      default: 'div'
-    }
-  },
-  computed: {
-    type() {
-      return this.group ? 'transition-group' : 'transition';
-    },
-    hooks() {
-      return {
-        beforeEnter: this.setDuration,
-        afterEnter: this.cleanUpDuration,
-        beforeLeave: this.setDuration,
-        afterLeave: this.cleanUpDuration,
-        leave: this.setAbsolutePosition,
-        ...this.$listeners,
-      };
-    }
-  },
-  methods: {
-    setDuration(el) {
-      el.style.animationDuration = `${this.duration}ms`;
-    },
-    cleanUpDuration(el) {
-      el.style.animationDuration = '';
-    },
-    setAbsolutePosition(el) {
-      if (this.group) {
-        el.style.position = 'absolute';
-      }
-    },
-  }
+  mixins: [transitionMixin],
 };
 </script>
 
