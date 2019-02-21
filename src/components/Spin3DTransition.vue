@@ -2,8 +2,8 @@
   <component :is="type"
              :tag="tag"
              :class="wrapperClass"
-             enter-active-class="Spin3D-animation"
-             leave-active-class="Spin3D-animation-reverse"
+             enter-active-class="spin3D-animation"
+             leave-active-class="spin3D-animation-reverse"
              move-class="smooth-move"
              v-bind="$attrs"
              v-on="hooks">
@@ -50,14 +50,14 @@ export default {
   animation-fill-mode: both;
 }
 
-.Spin3D-animation,
-.Spin3D-animation-reverse {
+.spin3D-animation,
+.spin3D-animation-reverse {
   animation-timing-function: linear;
   transform-origin: bottom center;
   animation-name: spin3D;
 }
 
-.Spin3D-animation-reverse {
+.spin3D-animation-reverse {
   animation-direction: reverse;
 }
 
