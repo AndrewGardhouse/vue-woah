@@ -1,0 +1,7 @@
+.woah {
+  animation-fill-mode: both;
+}
+
+.smooth-move {
+  transition: transform 1s linear;
+}

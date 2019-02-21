@@ -16,6 +16,10 @@ export default {
       type: String,
       default: 'woah-transition-group'
     },
+    moveClass: {
+      type: String,
+      default: 'smooth-move'
+    },
   },
   computed: {
     type() {
@@ -44,5 +48,5 @@ export default {
         el.style.position = 'absolute';
       }
     },
-  },  
+  },
 }

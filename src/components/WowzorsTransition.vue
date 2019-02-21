@@ -4,7 +4,7 @@
              :class="wrapperClass"
              enter-active-class="wowzors-animation"
              leave-active-class="wowzors-animation-reverse"
-             move-class="smooth-move"
+             :move-class="moveClass"
              v-bind="$attrs"
              v-on="hooks">
       <slot></slot>
@@ -12,6 +12,7 @@
 </template>
 <script>
 import transitionMixin from '@/mixins/transitionMixin'
+import '@/assets/style.css'
 
 export default {
   mixins: [transitionMixin],
@@ -54,10 +55,6 @@ export default {
   }
 }
 
-.woah {
-  animation-fill-mode: both;
-}
-
 .wowzors-animation,
 .wowzors-animation-reverse {
   animation-name: wowzors;
@@ -67,9 +64,5 @@ export default {
 
 .wowzors-animation-reverse {
   animation-direction: reverse;
-}
-
-.smooth-move {
-  transition: transform 1s linear;
 }
 </style>

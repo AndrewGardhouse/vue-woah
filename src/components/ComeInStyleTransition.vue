@@ -4,7 +4,7 @@
              :class="wrapperClass"
              enter-active-class="comeInStyle-animation"
              leave-active-class="comeInStyle-animation-reverse"
-             move-class="smooth-move"
+             :move-class="moveClass"
              v-bind="$attrs"
              v-on="hooks">
       <slot></slot>
@@ -12,6 +12,7 @@
 </template>
 <script>
 import transitionMixin from '@/mixins/transitionMixin'
+import '@/assets/style.css'
 
 export default {
   mixins: [transitionMixin],
@@ -50,10 +51,6 @@ export default {
     transform: none;
   }
 
-}
-
-.woah {
-  animation-fill-mode: both;
 }
 
 .comeInStyle-animation,

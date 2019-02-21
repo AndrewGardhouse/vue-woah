@@ -4,7 +4,7 @@
              :class="wrapperClass"
              enter-active-class="rotateComplex-animation"
              leave-active-class="rotateComplex-animation-reverse"
-             move-class="smooth-move"
+             :move-class="moveClass"
              v-bind="$attrs"
              v-on="hooks">
       <slot></slot>
@@ -12,6 +12,7 @@
 </template>
 <script>
 import transitionMixin from '@/mixins/transitionMixin'
+import '@/assets/style.css'
 
 export default {
   mixins: [transitionMixin],
