@@ -2,8 +2,8 @@
   <component :is="type"
              :tag="tag"
              :class="wrapperClass"
-             enter-active-class="flyInOut-animation"
-             leave-active-class="flyInOut-animation-reverse"
+             enter-active-class="flyIn-animation"
+             leave-active-class="flyIn-animation-reverse"
              move-class="smooth-move"
              v-bind="$attrs"
              v-on="hooks">
@@ -51,14 +51,14 @@ export default {
   animation-fill-mode: both;
 }
 
-.flyInOut-animation,
-.flyInOut-animation-reverse {
+.flyIn-animation,
+.flyIn-animation-reverse {
   animation-timing-function: ease-out;
   transform-origin: bottom center;
   animation-name: flyIn;
 }
 
-.flyInOut-animation-reverse {
+.flyIn-animation-reverse {
   animation-direction: reverse;
 }
 
