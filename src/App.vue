@@ -3,8 +3,8 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <button type="button" name="button" @click="toggleShow">Toggle</button>
     <button type="button" name="button" @click="addItem">Add</button>
-    <div class="box-wrapper">
-      <ComeInStyleTransition>
+    <FadeInTransition>
+      <!-- <div class="box-wrapper"> -->
         <!-- <div class="woah box"
               v-for="(item, index) in list"
               @click="remove(index)"
@@ -17,23 +17,18 @@
             {{ `Item: ${item}` }}
         </h1> -->
         <div class="box woah" v-if="show"></div>
-      </ComeInStyleTransition>
-    </div>
-      <!-- <div class="woah starWars box" v-if="show"></div> -->
+      <!-- </div> -->
+    </FadeInTransition>
   </div>
 </template>
 
 <script>
-// import WoahTransition from '@/components/WoahTransition'
-// import WowzorsTransition from '@/components/WowzorsTransition'
-import ComeInStyleTransition from '@/components/ComeInStyleTransition'
+import FadeInTransition from '@/components/FadeInTransition'
 
 export default {
   name: 'app',
   components: {
-    // WoahTransition,
-    // WowzorsTransition,
-    ComeInStyleTransition,
+    FadeInTransition,
   },
   data() {
     return {
@@ -61,7 +56,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
+  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
