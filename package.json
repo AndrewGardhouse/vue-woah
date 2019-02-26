@@ -1,11 +1,19 @@
 {
   "name": "vue-woah",
+  "description": "A simple Vue transition library based on woah.css",
+  "keywords": "vue, transition, library, animation, woah.css",
+  "homepage": "https://github.com/AndrewGardhouse/vue-woah#readme",
   "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name vue-woah ./src/components/index.js"
   },
   "main": "./dist/vue-woah.common.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "vue": "^2.5.22"
   },
