@@ -45,7 +45,7 @@ Notes:
 
 ## Props
 | Prop         | Description | Type | Default Value |
-|--------------|-------------|------|---------------|
+|:--------------:|-------------|------|---------------|
 | **duration**     | Length of transition | `Number` | 5000 |
 | **group**        | Is the component a `<transition-group>` | `Boolean` | `false` |
 | **moveClass**    | The class which is added when items are changing positions in `<transition-group>` [(learn more)](https://vuejs.org/v2/guide/transitions.html#List-Move-Transitions) | `String` | smooth-move |
