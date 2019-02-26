@@ -50,4 +50,5 @@ Notes:
 
 ## Special Thanks
 [Creating Reusable Transitions in Vue by Cristi Jora](https://vuejsdevelopers.com/2018/02/26/vue-js-reusable-transitions/)
+
 [Woah.css](http://www.joerezendes.com/projects/Woah.css/)
